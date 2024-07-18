@@ -11,5 +11,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: ./callee.yml
+    - uses: ./.github/workflows/callee.yml
       
