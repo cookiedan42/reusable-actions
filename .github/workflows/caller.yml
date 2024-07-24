@@ -9,13 +9,17 @@ env:
   NAME: "caller"
     
 jobs:
-  build:
+  setENV:
     runs-on: ubuntu-latest
-
+    outputs:
+      NAME: ${{env.NAME}}
     steps:
     - uses: actions/checkout@v4
+    
   callChild:
+    needs:
+      - setENV
     uses: cookiedan42/reusable-actions/.github/workflows/callee.yml@main
     with:
-      NAME: ${{env.Name}}
+      NAME: ${{setENV.NAME}}
       
