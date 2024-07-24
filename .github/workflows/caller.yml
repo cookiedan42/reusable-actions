@@ -17,5 +17,5 @@ jobs:
   callChild:
     uses: cookiedan42/reusable-actions/.github/workflows/callee.yml@main
     with:
-      NAME: env.NAME
+      NAME: ${{env.Name}}
       
