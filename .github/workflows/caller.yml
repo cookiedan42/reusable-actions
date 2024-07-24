@@ -11,5 +11,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: cookiedan42/reusable-actions/.github/workflows/callee.yml@main
+  callChild:
+    uses: cookiedan42/reusable-actions/.github/workflows/callee.yml@main
       
