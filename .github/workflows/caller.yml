@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
+
+env:
+  NAME: "caller"
     
 jobs:
   build:
