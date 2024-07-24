@@ -2,12 +2,15 @@ name: Deploy to UAT1
 
 on:
   workflow_call:
-    
+
+env:
+  NAME: "child"
+  
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
     - name: hello world
-      run: echo "hello world"
+      run: echo "hello ${{env.name}}"
       
