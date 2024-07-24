@@ -2,6 +2,10 @@ name: Deploy to UAT1
 
 on:
   workflow_call:
+    inputs:
+      NAME:
+        required: true
+        type: string
 
 env:
   NAME: "child"
@@ -12,5 +16,5 @@ jobs:
 
     steps:
     - name: hello world
-      run: echo "hello ${{env.NAME}}"
+      run: echo "hello ${{inputs.NAME}}"
       
